@@ -1,0 +1,184 @@
+
+body,
+html {
+  width: 100%;
+  height: 100%; 
+}
+
+.hide {
+  /* display: none; */
+  width: 0px;
+  height: 0px;
+  transition: 0.5s;
+}
+
+
+/* 
+    Frame Boarders
+ */
+
+.top {
+  height: 0;
+  width: 95px;
+  border-top: 18px solid #044aec;
+  border-left: 26px solid transparent;
+  border-right: 26px solid transparent;
+  position: absolute;
+  top: 0px;
+  /* left: 0px; */
+}
+
+.left {
+  height: 111px;
+  width: 0px;
+  border-bottom: 18px solid #04ec1600;
+  border-left: 26px solid #00ff40;
+  border-top: 18px solid transparent;
+  /* top: 0px; */
+  left: 0px;
+  position: absolute;
+}
+
+.right {
+  height: 111px;
+  width: 0px;
+  border-right: 26px solid #deec04;
+  border-top: 18px solid transparent;
+  border-bottom: 18px solid transparent;
+  position: absolute;
+  /* top: 0; */
+  right: 0;
+}
+
+.bottom {
+  height: 0;
+  width: 95px;
+  border-bottom: 18px solid #ec3504;
+  border-left: 26px solid transparent;
+  border-right: 26px solid transparent;
+  position: absolute;
+  bottom: 0;
+}
+
+/* 
+        Data Views
+ */
+
+.view-right {
+  width: 0px;
+  height: 100%;
+  background: blanchedalmond;
+  position: absolute;
+  top: 0px;
+  left: 121px;
+}
+
+.view-right.expand{
+  transition: 0.5s;
+  width: 378px !important;
+  direction: rtl;
+}
+
+.view-left {
+  width: 0px;
+  height: 100%;
+  background: rgb(163, 73, 73);
+  position: absolute;
+  top: 0px;
+  right: 122px;
+}
+
+.view-left.expand {
+  transition: 0.5s;
+  width: 175px !important;
+  direction: rtl;
+}
+
+.view-bottom {
+  width: 148px;
+  height: 0px;
+  background: rgb(197, 203, 210);
+  position: absolute;
+  top: 131px;
+  left: 0px;
+}
+
+.view-bottom.expand{
+  transition: 0.5s;
+  height: 165px !important;
+}
+
+.view-center {
+  width: 97px;
+  height: 114px;
+  background: rgb(26, 129, 247);
+  position: absolute;
+  top: 17px;
+  left: 25px;
+}
+
+.view-center.expand {
+  transition: 0.5s;
+  left: 174px !important;
+}
+
+.view-center.close {
+  transition: 0.5s;
+  left: 25px;
+}
+
+/* 
+      Container Animations
+ */
+
+.container {
+  width: 148px;
+  height: 147px;
+  background-color: rgba(163, 152, 152, 0);
+  position: relative;
+  /* overflow: hidden; */
+  top: -50;
+}
+
+.container.expandRight {
+  /* -webkit-transition: 3s;
+  -moz-transition: 3s;
+  -ms-transition: 3s;
+  -o-transition: 3s; */
+  transition: 0.5s;
+  width: 500px !important;
+}
+
+.container.expandLeft {
+  /* -webkit-transition: 3s;
+  -moz-transition: 3s;
+  -ms-transition: 3s;
+  -o-transition: 3s; */
+  transition: 0.5s;
+  width: 296px !important;
+  direction: rtl;
+}
+
+.container.close {
+  /* -webkit-transition: 3s;
+  -moz-transition: 3s;
+  -ms-transition: 3s;
+  -o-transition: 3s; */
+  transition: 0.5s;
+  top:  0;
+  left: 0;
+  width: 148px !important;
+  height: 147px !important;
+  direction: ltr;
+}
+
+.container.expandBottom{
+  transition: 0.5s;
+  height: 296px !important;
+}
+
+.container.expandTop{
+  transition: 0.5s;
+  /* top: 296px !important; */
+  /* height: 296px !important; */
+}
