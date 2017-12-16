@@ -11,7 +11,21 @@ var containerViewBottom = document.getElementById("container-view-bottom");
 var containerViewCenter = document.getElementById("container-view-center");
 
 var audio = new Audio('audio/click.ogg');
+var mute = document.getElementById('mute');
+var muted = false;
 
+mute.onchange = function(e){
+    if(mute.checked){
+        muted = true;
+    }
+    else
+        muted = false;
+}
+var playClick = function(){
+    if(!muted){
+        audio.play();
+    }
+}
 
 
 var state = "close";
@@ -22,7 +36,7 @@ var closeContainer = function(e){
     e.stopPropagation();
     if(state != "close"){
         state = "close";
-        audio.play();
+        playClick();
         container.className = "container close"
         containerViewRight.className = 'view-right hide';
         containerViewRightButtons.className = 'view-right-top-buttons-container hide';
@@ -36,7 +50,7 @@ containerViewCenter.onclick = closeContainer;
 
 
 containerRight.onclick = function(e){
-    audio.play();
+    playClick();
     e.stopPropagation();
     if(state != "close"){
         closeContainer(e); 
@@ -72,7 +86,7 @@ container.addEventListener('transitionend', function(e){
 });
 
 containerLeft.onclick = function(e){
-    audio.play();
+    playClick();
     e.stopPropagation();
     if(state != "close"){
         closeContainer(e); 
@@ -97,7 +111,7 @@ containerLeft.onclick = function(e){
 
 
 containerBottom.onclick = function(e){
-    audio.play();
+    playClick();
     e.stopPropagation();
     if(state != "close"){
         closeContainer(e); 
@@ -116,7 +130,7 @@ containerBottom.onclick = function(e){
 
 
 containerTop.onclick = function(e){
-    audio.play();
+    playClick();
     e.stopPropagation();
     if(state != "close"){
         closeContainer(e); 

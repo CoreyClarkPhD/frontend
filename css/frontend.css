@@ -256,6 +256,7 @@ html {
   right: 37px;
   position: absolute;
   overflow: hidden;
+  /* box-shadow: inset -5px -5px 5px #888; */
   }
 
 
@@ -285,6 +286,7 @@ html {
   height: 100%;
   position: absolute;
   left: 0;
+  box-shadow: inset 0 0 5px 5px #888;
 }
 
 .view-right-top-buttons-container {
@@ -311,3 +313,60 @@ html {
 .view-right-bar-top {top: 0px;}
 
 .view-right-bar-bottom {bottom: 0px;}
+
+.mute {
+ padding-left: 19px;
+ font-size: x-large;
+}
+
+.settings {
+  top: 32px;
+  left: 40px;
+  position: absolute;
+  color: white;
+}
+
+
+/* Reset Select */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background: #2c3e50;
+  background-image: none;
+}
+/* Custom Select */
+.styled-select {
+  background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+  height: 29px;
+  overflow: hidden;
+  width: 240px;
+}
+
+.styled-select select {
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  height: 29px;
+  padding: 5px; /* If you add too much padding here, the options won't show in IE */
+  width: 268px;
+}
+
+.semi-square {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.blue    { background-color: #3b8ec2; }
+.blue select    { color: #fff; }
+
+.select-position {
+  position: absolute;
+  top: 60px;
+  left: 38px;
+  width: 158px;
+}
