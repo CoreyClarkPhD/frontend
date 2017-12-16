@@ -5,6 +5,7 @@ var containerLeft = document.getElementById('container-frame-left');
 var containerRight = document.getElementById('container-frame-right');
 
 var containerViewRight = document.getElementById("container-view-right");
+var containerViewRightButtons = document.getElementById('top-buttons')
 var containerViewLeft = document.getElementById("container-view-left");
 var containerViewBottom = document.getElementById("container-view-bottom");
 var containerViewCenter = document.getElementById("container-view-center");
@@ -24,13 +25,14 @@ var closeContainer = function(e){
         audio.play();
         container.className = "container close"
         containerViewRight.className = 'view-right hide';
+        containerViewRightButtons.className = 'view-right-top-buttons-container hide';
         containerViewLeft.className = 'view-left hide';
         containerViewBottom.className = 'view-bottom hide';
-        containerViewCenter.className = 'view-center close';
+        containerViewCenter.className = 'view-center view-center-image-bmt close';
     }
 
 }
-container.onclick = closeContainer;
+containerViewCenter.onclick = closeContainer;
 
 
 containerRight.onclick = function(e){
@@ -52,8 +54,22 @@ containerRight.onclick = function(e){
         
         container.classList.add('expandRight');
         container.classList.remove('close');
+
+        containerViewRightButtons.classList.add('expand');
+        containerViewRightButtons.classList.remove('hide');
+
     }
 }
+container.addEventListener('transitionend', function(e){
+    e.stopImmediatePropagation();
+    if(e.eventPhase == 3){
+        console.log ("transition ended");
+        console.log("Target: " + e.currentTarget.className);
+
+        //if(e.currentTarget.className)
+    }
+    
+});
 
 containerLeft.onclick = function(e){
     audio.play();
