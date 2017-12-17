@@ -39,7 +39,7 @@ var closeContainer = function(e){
         playClick();
         container.className = "container close"
         containerViewRight.className = 'view-right hide';
-        containerViewRightButtons.className = 'view-right-top-buttons-container hide';
+        //containerViewRightButtons.className = 'view-right-top-buttons-container hide';
         containerViewLeft.className = 'view-left hide';
         containerViewBottom.className = 'view-bottom hide';
         containerViewCenter.className = 'view-center view-center-image-bmt close';
@@ -69,8 +69,8 @@ containerRight.onclick = function(e){
         container.classList.add('expandRight');
         container.classList.remove('close');
 
-        containerViewRightButtons.classList.add('expand');
-        containerViewRightButtons.classList.remove('hide');
+        // containerViewRightButtons.classList.add('expand');
+        // containerViewRightButtons.classList.remove('hide');
 
     }
 }

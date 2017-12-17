@@ -3,7 +3,14 @@ body,
 html {
   width: 100%;
   height: 100%;
-  background: url('../images/clark.jpg');
+  /* background-color:rgba(0, 0, 0, 0.5) */
+  
+}
+
+body{
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 .hide {
@@ -14,6 +21,18 @@ html {
   overflow: hidden;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
+.bold {
+  font-weight: bolder;
+}
+
+.sans-serif{
+  font-family: Sans-Serif;
+  color: white;
+}
 
 /* 
     Frame Boarders
@@ -64,7 +83,7 @@ html {
   /* border-left: 26px solid transparent; */
   /* border-right: 26px solid transparent; */
   position: absolute;
-  bottom: -2px;
+  bottom: -1px;
   background: url("../images/bottom.png");
   background-size: cover;
 }
@@ -75,11 +94,11 @@ html {
 
 .view-right {
   width: 0px;
-  height: 100%;
-  /* background: blanchedalmond; */
+  height: 193px;
+  background: rgba(0, 0, 0, 0.8);
   position: absolute;
-  top: 0px;
-  left: 256px;
+  top: 31px;
+  left: 224px;
   overflow: hidden;
 }
 
@@ -91,27 +110,27 @@ html {
 
 .view-left {
   width: 0px;
-  height: 100%;
-  /* background: rgb(163, 73, 73); */
+  height: 195px;
+  background: rgba(0, 0, 0, 0.8);
   position: absolute;
-  top: 0px;
-  right: 256px;
+  top: 31px;
+  right: 223px;
 }
 
 .view-left.expand {
   transition: 0.5s;
-  width: 173px !important;
+  width: 176px !important;
   direction: rtl;
 }
 
 .view-bottom {
-  width: 257px;
+  width: 192px;
   height: 0px;
-  /* background: rgb(197, 203, 210); */
+  background: rgba(0, 0, 0, 0.8);
   position: absolute;
-  top: 256px;
+  top: 224px;
   overflow: hidden;
-  left: 0px;
+  left: 33px;
 }
 
 .view-bottom.expand{
@@ -126,22 +145,22 @@ html {
 }
 .view-bottom-field.top_position {
   top: 2px;
-  left: 35px;
+  left: 9px;
 }
 
 .view-bottom-field.middle_position {
   top: 2px;
-  left: 138px;
+  left: 101px;
 }
 
 .view-bottom-field.bottom_position {
-  top: 91px;
-  left: 37px;
+  top: 108px;
+  left: 9px;
 }
 
 .view-bottom-field.right_position {
-  top: 91px;
-  left: 148px;
+  top: 108px;
+  left: 101px;
 }
 
 .wiley-image{
@@ -176,7 +195,7 @@ html {
 }
 
 .view-center-image-bmt {
-  background: rgba(205, 208, 212, 0) url(../images/BALANCEDIcon.png);
+  background: rgba(0, 0, 0, 0.8) url(../images/BALANCEDIcon.png);
   background-position: center;
   background-size: cover;
 }
@@ -199,7 +218,8 @@ html {
   width: 257px;
   height: 255px;
   /* background: url("../images/Background.png"); */
-  background: #000000ad;
+  /* background: #000000ad; */
+  /* background-color:rgba(0, 0, 0, 0.8); */
   position: relative;
   /* overflow: hidden; */
   top: -50;
@@ -251,9 +271,9 @@ html {
 
 .view-right-field {
   height: 44px;
-  width: 300px;
-  background-color: #4f4f6b;
-  right: 37px;
+  width: 269px;
+  background-color: rgb(13,30,50);
+  right: 88px;
   position: absolute;
   overflow: hidden;
   /* box-shadow: inset -5px -5px 5px #888; */
@@ -261,32 +281,40 @@ html {
 
 
 .view-right-field-top {
-  top: 65px;
+  top: 20px;
 }
 
 .view-right-field-bottom {
-  top: 157px;
+  top: 113px;
 }
 
-.view-right-field-top-image {width: 44px;height: 44px;top: 65px;left: 42px;position: absolute;}
+.view-right-field-top-image {width: 44px;height: 44px;top: 20px;left: 42px;position: absolute;}
 .community-goal-image {background: url('../images/BALANCEDIcon.png');background-size: cover;}
 
 .view-right-field-bottom-image {
   width: 44px;
   height: 44px;
-  top: 157px;
+  top: 113px;
   left: 42px;
   position: absolute;
 }
 
 .user-goal-image {background: url('../images/clark.jpg');background-size: cover;}
 
+
 .progress-bar{
-  background-color: #a6a6af;
   height: 100%;
   position: absolute;
   left: 0;
-  box-shadow: inset 0 0 5px 5px #888;
+  /* box-shadow: inset 0 0 5px 5px #888; */
+}
+
+.progress-bar-community-color {
+  background-color: rgba(216,181,63,1); 
+}
+
+.progress-bar-user-color {
+  background-color: rgba(62,160,174,1); 
 }
 
 .view-right-top-buttons-container {
@@ -314,6 +342,50 @@ html {
 
 .view-right-bar-bottom {bottom: 0px;}
 
+.heart-image{
+  background: url('../images/heart.png');
+  height: 44px;
+  width: 44px;
+  position: absolute;
+  top: 111px;
+  background-size: cover;
+  right: 27px;
+}
+
+.time-image{
+  background: url('../images/time.png');
+  height: 44px;
+  width: 44px;
+  position: absolute;
+  top: 20px;
+  right: 27px;
+  background-size: cover;
+}
+
+.community-name {
+  position: absolute;
+  left: 104px;
+  top: 71px;
+}
+
+.user-name {
+  position: absolute;
+  left: 104px;
+  top: 163px;
+}
+
+.user-value {
+  position: absolute;
+  right: 88px;
+  top: 163px;
+}
+
+.community-value {
+  position: absolute;
+  right: 88px;
+  top: 71px;
+}
+
 .mute {
  padding-left: 19px;
  font-size: x-large;
@@ -321,7 +393,7 @@ html {
 
 .settings {
   top: 32px;
-  left: 40px;
+  left: 7px;
   position: absolute;
   color: white;
 }
@@ -341,9 +413,10 @@ select {
 }
 /* Custom Select */
 .styled-select {
-  background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+  /* background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0; */
   height: 29px;
   overflow: hidden;
+  text-align: left;
   width: 240px;
 }
 
@@ -361,12 +434,12 @@ select {
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
-.blue    { background-color: #3b8ec2; }
+.blue    {background-color: rgb(45,75,105);}
 .blue select    { color: #fff; }
 
 .select-position {
   position: absolute;
-  top: 60px;
-  left: 38px;
+  top: 68px;
+  left: 6px;
   width: 158px;
 }
