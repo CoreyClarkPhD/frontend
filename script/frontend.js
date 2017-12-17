@@ -1,3 +1,5 @@
+mixerAuth();
+
 var container = document.getElementById('container');
 var containerBottom = document.getElementById('container-frame-bottom');
 var containerTop = document.getElementById('container-frame-top');
