@@ -190,5 +190,7 @@ var playerCredits = 0;
 
 var pointsUpdateCallback = function (points) {
     playerCredits = points;
-    // callback to update points
+	// callback to update points
+	document.getElementById('user-goal-value').innerHTML = '10000 / ' + points;
+	document.getElementById('progress-user-bar').style.width = (points/10000) + '%';
 }
