@@ -12,6 +12,65 @@ var containerViewLeft = document.getElementById("container-view-left");
 var containerViewBottom = document.getElementById("container-view-bottom");
 var containerViewCenter = document.getElementById("container-view-center");
 
+var communityGoalImage = document.getElementById('community-goal-image');
+var communityNameDiv   = document.getElementById('community-name');
+var communitySelector = document.getElementById('community-selector');
+var communityImageCSS = "view-center-image-bmt";
+communitySelector.addEventListener('change', function(e){
+    // <option>Select Community</option>
+    // <option value="1">BALANCED</option>
+    // <option value="2">Direwolf20</option>
+    // <option value="3">TangoTek</option>
+    // <option value="4">ImpulseSV</option>
+    // <option value="5">GhostfromTexas</option>
+    if(communitySelector.value == "1"){
+        containerViewCenter.className = "view-center view-center-image-bmt expand";
+        communityImageCSS = "view-center-image-bmt";
+        communityGoalImage.className = 'view-right-field-top-image ' + communityImageCSS;
+        communityNameDiv.innerHTML = "balanced";
+    } 
+    else if(communitySelector.value == "2"){
+        containerViewCenter.className = "view-center view-center-image-dire expand";
+        communityImageCSS = "view-center-image-dire";
+        communityGoalImage.className = 'view-right-field-top-image ' + communityImageCSS;
+        communityNameDiv.innerHTML = "Direwolf20";
+    }
+    else if(communitySelector.value == "3"){
+        containerViewCenter.className = "view-center view-center-image-tangotek expand";
+        communityImageCSS = "view-center-image-tangotek";
+        communityGoalImage.className = 'view-right-field-top-image ' + communityImageCSS;
+        communityNameDiv.innerHTML = "tango tek";
+    }
+    else if(communitySelector.value == "4"){
+        containerViewCenter.className = "view-center view-center-image-impulse expand";
+        communityImageCSS = "view-center-image-impulse";
+        communityGoalImage.className = 'view-right-field-top-image ' + communityImageCSS;
+        communityNameDiv.innerHTML = "ImpulseSV";
+    }
+    else if(communitySelector.value == "5"){
+        containerViewCenter.className = "view-center view-center-image-ghost expand";
+        communityImageCSS = "view-center-image-ghost";
+        communityGoalImage.className = 'view-right-field-top-image ' + communityImageCSS;
+        communityNameDiv.innerHTML = "GhostfromTexas";
+    }
+    else {
+        containerViewCenter.className = "view-center view-center-image-bmt expand";
+        communityImageCSS = "view-center-image-bmt";
+        communityGoalImage.className = 'view-right-field-top-image ' + communityImageCSS;
+        communityNameDiv.innerHTML = "balanced";
+    }
+}, false);
+
+var loginButton = document.getElementById('login-button');
+loginButton.addEventListener('click', function(e){
+    if(!mixerUser || !mixerUser.username ){
+        mixerAuth();
+    }
+    else{
+        console.log("Logged in as: " + mixerUser.username);
+    }
+})
+
 var audio = new Audio('audio/click.ogg');
 var mute = document.getElementById('mute');
 var muted = false;
@@ -44,7 +103,7 @@ var closeContainer = function(e){
         //containerViewRightButtons.className = 'view-right-top-buttons-container hide';
         containerViewLeft.className = 'view-left hide';
         containerViewBottom.className = 'view-bottom hide';
-        containerViewCenter.className = 'view-center view-center-image-bmt close';
+        containerViewCenter.className = 'view-center ' + communityImageCSS + ' close';
     }
 
 }

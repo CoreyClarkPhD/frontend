@@ -167,6 +167,10 @@ function onMixerAuth(param) {
 		var img  = document.getElementById('user-goal-image');
 		img.style.background = "url(" + mixerUser.avatarUrl + ")";
 		img.style.backgroundSize = 'cover';
+
+		//Update username
+		document.getElementById('user-name').innerHTML = mixerUser.username;
+		document.getElementById('login-button').innerHTML =  mixerUser.username;
 	});
 
 }

@@ -144,12 +144,12 @@ body{
  position: absolute;
 }
 .view-bottom-field.top_position {
-  top: 2px;
+  top: 13px;
   left: 9px;
 }
 
 .view-bottom-field.middle_position {
-  top: 2px;
+  top: 13px;
   left: 101px;
 }
 
@@ -199,6 +199,31 @@ body{
   background-position: center;
   background-size: cover;
 }
+
+.view-center-image-tangotek {
+  background: rgba(0, 0, 0, 0.8) url(../images/tangotek.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.view-center-image-ghost {
+  background: rgba(0, 0, 0, 0.8) url(../images/TexasGhost01.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.view-center-image-dire {
+  background: rgba(0, 0, 0, 0.8) url(../images/TexasGhost01.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.view-center-image-impulse {
+  background: rgba(0, 0, 0, 0.8) url(../images/TexasGhost01.png);
+  background-position: center;
+  background-size: cover;
+}
+
 
 .view-center.expand {
   transition: 0.5s;
@@ -289,7 +314,7 @@ body{
 }
 
 .view-right-field-top-image {width: 44px;height: 44px;top: 20px;left: 42px;position: absolute;}
-.community-goal-image {background: url('../images/BALANCEDIcon.png');background-size: cover;}
+.community-goal-image {background: url('../images/BALANCEDIcon.png');background-size: cover;background-position: center;}
 
 .view-right-field-bottom-image {
   width: 44px;
@@ -428,6 +453,15 @@ select {
   padding: 5px; /* If you add too much padding here, the options won't show in IE */
   width: 268px;
 }
+.styled-select:hover {
+  border-top-color: #28597a;
+  background: #28597a;
+  color: #ccc;
+  }
+.styled-select:active {
+  border-top-color: #1b435e;
+  background: #1b435e;
+  }
 
 .semi-square {
   -webkit-border-radius: 5px;
@@ -443,3 +477,36 @@ select {
   left: 6px;
   width: 158px;
 }
+
+.button {
+  /* border-top: 1px solid #84898c; */
+  background: rgb(45,75,105);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 5px;
+  /* -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0; */
+  -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+  /* box-shadow: rgba(0,0,0,1) 0 1px 0; */
+  /* text-shadow: rgba(0,0,0,.4) 0 1px 0; */
+  color: white;
+  font-size: 13px;
+  font-family: Sans-Serif;
+  text-decoration: none;
+  vertical-align: middle;
+  text-align: center;
+  top: 76px;
+  left: -1px;
+  position: absolute;
+  width: 136px;
+  height: 21px;
+  padding: 5px 11px;
+  }
+.button:hover {
+  border-top-color: #28597a;
+  background: #28597a;
+  color: #ccc;
+  }
+.button:active {
+  border-top-color: #1b435e;
+  background: #1b435e;
+  }
